@@ -1,7 +1,8 @@
 include("../deps/path.jl")
 const basever = Base.libllvm_version
 function addLLVMIncludes(C, clangheaders = true, juliainclude = joinpath(BASE_JULIA_BIN,"..","include"),
-    llvmdir = joinpath(Cxx.depspath,contains(basever,"svn") ? "llvm-svn" : "llvm-$ver"), ver = VersionNumber(basever))
+    ver = VersionNumber(basever), llvmdir = joinpath(Cxx.depspath,contains(basever,"svn") ? "llvm-svn" : "llvm-$ver"))
+
 
     # LLVM Headers
 
